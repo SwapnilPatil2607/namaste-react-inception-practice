@@ -22,12 +22,14 @@ const Parent = React.createElement(
   "div",
   { id: "parent" },
   React.createElement("div", { id: "children" }, [
-    React.createElement("h1", { class: "headings" }, "first element"),
-    React.createElement("h1", { class: "headings" }, "second element"),
-    React.createElement("h1", { class: "headings" }, "third element"),
+    React.createElement("h1", { className: "headings" }, "first element"),
+    React.createElement("h1", { className: "headings" }, "second element"),
+    React.createElement("h1", { className: "headings" }, "third element"),
   ])
 );
 
 const Root = ReactDOM.createRoot(document.getElementById("root"));
 
 Root.render(Parent);
+
+console.log(Parent, "<- it returns a object not an html tag");
