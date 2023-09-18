@@ -11,17 +11,24 @@
         <h1>Hello World!</h1>
     </div> -->
 
-    <div id="root"></div>
-
-    <!-- <script>
+    <h1>this wont replaced (outside root)</h1>
+    <div id="root">
+      <h1>Will get replaced because of render of react</h1>
+      <!-- it will get print and get replaced in miliseconds as soon as script js is read by browser -->
+    </div>
+    <h1>this wont replaced either (outside root)</h1>
+    <!-- 
+      <script>
       const heading = document.createElement("h1");
       heading.innerHTML = "Hello world for javascript";
 
       const root = document.getElementById("root");
       root.appendChild(heading);
-    </script> -->
+    </script>
+   -->
 
     <!-- now we have super powers of react because of 2 links below -->
+    <!-- react code wont be read by browser without this CDN links since it does not understand reactjs -->
     <script
       crossorigin
       src="https://unpkg.com/react@18/umd/react.development.js"
@@ -31,6 +38,7 @@
       src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
     ></script>
 
+    <!-- our index file needs to be here after (CDN) Content delivery network links -->
     <script src="./index.js">
       // const heading = React.createElement("h1", {}, "Hello world from react!");
       // const root = ReactDOM.createRoot(document.getElementById("root"));
