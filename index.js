@@ -18,15 +18,19 @@
 // console.log(heading, "<- it returns a object not an html tag");
 
 //                                    for nested elements
-const Parent = React.createElement(
-  "div",
-  { id: "parent" },
+const Parent = React.createElement("div", { id: "parent" }, [
   React.createElement("div", { id: "children" }, [
     React.createElement("h1", { className: "headings" }, "first element"),
     React.createElement("h1", { className: "headings" }, "second element"),
     React.createElement("h1", { className: "headings" }, "third element"),
-  ])
-);
+  ]),
+  React.createElement("div", { id: "children2" }, [
+    React.createElement("h1", { className: "headings" }, "first element"),
+    React.createElement("h1", { className: "headings" }, "second element"),
+    React.createElement("h1", { className: "headings" }, "third element"),
+  ]),
+]);
+// to avoid these mess we use JSX
 
 const Root = ReactDOM.createRoot(document.getElementById("root"));
 
